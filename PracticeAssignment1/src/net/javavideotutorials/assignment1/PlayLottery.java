@@ -1,6 +1,7 @@
 package net.javavideotutorials.assignment1;
 
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.Set;
 
 import org.junit.Test;
@@ -58,12 +59,18 @@ public class PlayLottery
    * the userNumbers are (4, 18, 22, 24, 35, 45) then the returned Set
    * of Integers should be (4, 45)
    * 
-   * @param lotteryNumbers the lottery nubmers that were randomly generated
+   * @param lotteryNumbers the lottery numbers that were randomly generated
    * @param userNumbers the user picked numbers that were picked in the console
    * @return Set of matched numbers
    */
   public Set<Integer> playLottery (Set<Integer> lotteryNumbers, Set<Integer> userNumbers)
   {
-    return null;
+    Set<Integer> matchingNumbers = new HashSet<Integer>();
+    for(int i : userNumbers) {
+      for(int j : lotteryNumbers) {
+        if(i == j) matchingNumbers.add(i);
+      }
+    }
+    return matchingNumbers;
   }
 }
