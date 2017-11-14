@@ -66,9 +66,9 @@ public class PlayLottery
   public Set<Integer> playLottery (Set<Integer> lotteryNumbers, Set<Integer> userNumbers)
   {
     Set<Integer> matchingNumbers = new HashSet<Integer>();
-    for(int i : userNumbers) {
-      for(int j : lotteryNumbers) {
-        if(i == j) matchingNumbers.add(i);
+    for(int x : userNumbers) {
+      for(int y : lotteryNumbers) {
+        if(x == y) matchingNumbers.add(x);
       }
     }
     return matchingNumbers;
